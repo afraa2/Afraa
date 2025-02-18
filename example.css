@@ -1,0 +1,145 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #6D8E6E, #909575, #BAAA91);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    gap: 20px;
+}
+
+.image-column {
+    width: 22%;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.image-column:hover {
+    transform: scale(1.07);
+    box-shadow: 0 6px 15px rgba(131, 226, 160, 0.2);
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(31, 77, 42, 0.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.text {
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+h2 {
+    font-size: 24px;
+    color: #5E7D5E;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* تصميم الزر الجديد */
+button {
+    background: linear-gradient(45deg, #5E7D5E, #6D8E6E);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 8px;
+}
+
+/* تأثير عند تمرير الماوس */
+button:hover {
+    background: linear-gradient(45deg, #4E6D4E, #5E7D5E);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* تأثير عند الضغط */
+button:active {
+   
+    transform: scale(0.95);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* تصميم استجابة */
+@media (max-width: 1024px) {
+    .image-column { width: 45%; }
+}
+
+@media (max-width: 768px) {
+    .image-column { width: 48%; }
+}
+
+@media (max-width: 480px) {
+    .image-column { width: 100%; }
+}
+.animated-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    animation: fadeInOut 3s infinite alternate;
+  }
+  
+  @keyframes fadeInOut {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1.1); }
+  }
+  
+  .animated-text:hover {
+    color: #909575; /* اللون الأخضر الداكن */
+  }
+
+
