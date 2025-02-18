@@ -399,3 +399,80 @@ h2:hover {
           padding: 10px;
         }
       }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #6b7755;
+        padding: 15px 20px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    
+    /* تصميم اللوجو */
+    .logo {
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    /* تصميم القائمة */
+    nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    
+    .nav-links li {
+        padding: 5px 10px;
+    }
+    
+    .nav-links a {
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+    }
+    
+    /* إخفاء زر القائمة في الشاشات الكبيرة */
+    #menu-toggle {
+        display: none;
+    }
+    
+    .menu-icon {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+    
+    /* جعل القائمة متجاوبة مع الشاشات الصغيرة */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background: #6b7755;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+    
+        .menu-icon {
+            display: block;
+        }
+    
+        /* إظهار القائمة عند الضغط */
+        #menu-toggle:checked + .menu-icon + .nav-links {
+            display: flex;
+        }
+    }
